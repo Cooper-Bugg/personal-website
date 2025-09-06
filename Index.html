@@ -2,18 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Name - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Cooper Huntington-Bugg - Portfolio</title>
+   <link rel="stylesheet" href="styles.css">
+   <!-- FontAwesome for icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Welcome to my personal website! I'm learning web development.</p>
+ 
+  <header id="home" class="active-section">
+    <div class="profile-photo">
+      <!-- Replace the src with your own photo URL or file path -->
+      <img src="https://via.placeholder.com/140x140.png?text=Your+Photo" alt="Your Photo" width="140" height="140" style="border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.12);margin-bottom:1rem;">
+    </div>
+    <h1>Cooper Huntington-Bugg</h1>
+    <p>Welcome to my personal website! I am studying Computer Science with a minor in Mathematics.</p>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Write a few sentences about yourself, your interests, and your goals.</p>
+    <p>I am passionate about technology and enjoy working on projects that challenge my skills. In my free time, I like to read, spend time with friends, and explore the outdoors.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><i class="fab fa-html5"></i> HTML</li>
+      <li><i class="fab fa-css3-alt"></i> CSS</li>
+      <li><i class="fab fa-python"></i> Python</li>
+      <li><i class="fas fa-code"></i> C++</li>
+      <!-- Add more skills and icons as you learn -->
+    </ul>
   </section>
 
   <section id="portfolio">
@@ -30,7 +48,29 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>Email: <a href="mailto:cohunti@okstate.edu">cohunti@okstate.edu</a></p>
   </section>
+
+  <nav>
+    <ul>
+      <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
+      <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+      <li><a href="#skills" onclick="showSection('skills'); return false;">Skills</a></li>
+      <li><a href="#portfolio" onclick="showSection('portfolio'); return false;">Projects</a></li>
+      <li><a href="#contact" onclick="showSection('contact'); return false;">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function showSection(id) {
+      // Hide all sections and header
+      document.querySelectorAll('header, section').forEach(function(el) {
+        el.classList.remove('active-section');
+      });
+      // Show the selected section
+      var el = document.getElementById(id);
+      if (el) el.classList.add('active-section');
+    }
+  </script>
 </body>
 </html>
