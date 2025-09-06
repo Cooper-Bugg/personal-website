@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #222;
+}
+
+header {
+  background: #4f8cff;
+  color: #fff;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+section {
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 1em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.project {
+  padding: 1em;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #f4f8ff;
+}
+
+a {
+  color: #4f8cff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
