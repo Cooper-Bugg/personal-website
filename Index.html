@@ -1,28 +1,33 @@
+<!-- Main HTML file for personal website -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Cooper Huntington-Bugg - Portfolio</title>
-   <link rel="stylesheet" href="styles.css">
-   <!-- FontAwesome for icons -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Link to custom CSS file for styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome for technology icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
  
-  <header id="home" class="active-section">
+  <!-- Home section: name and profile photo -->
+  <section id="home" class="active-section">
     <div class="profile-photo">
-      <!-- Replace the src with your own photo URL or file path -->
-      <img src="https://via.placeholder.com/140x140.png?text=Your+Photo" alt="Your Photo" width="140" height="140" style="border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.12);margin-bottom:1rem;">
+      <img src="images/Picture_of_me.jpg" alt="Your Photo" width="140" height="140" style="border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.12);margin-bottom:1rem;">
     </div>
     <h1>Cooper Huntington-Bugg</h1>
     <p>Welcome to my personal website! I am studying Computer Science with a minor in Mathematics.</p>
-  </header>
+  </section>
 
+  <!-- About Me section -->
   <section id="about">
     <h2>About Me</h2>
+  <!-- Personal interests and background -->
     <p>I am passionate about technology and enjoy working on projects that challenge my skills. In my free time, I like to read, spend time with friends, and explore the outdoors.</p>
   </section>
 
+  <!-- Skills section: technology icons from FontAwesome -->
   <section id="skills">
     <h2>Skills</h2>
     <ul class="skills-list">
@@ -30,27 +35,31 @@
       <li><i class="fab fa-css3-alt"></i> CSS</li>
       <li><i class="fab fa-python"></i> Python</li>
       <li><i class="fas fa-code"></i> C++</li>
-      <!-- Add more skills and icons as you learn -->
+  <!-- Add additional skills and icons as needed -->
     </ul>
   </section>
 
+  <!-- Portfolio section: showcase projects -->
   <section id="portfolio">
     <h2>Portfolio</h2>
     <div class="projects">
-      <!-- Add your projects here as you create them -->
+  <!-- Add projects here -->
       <div class="project">
         <h3>Project Title</h3>
-        <p>Short description of your project.</p>
+        <p>More information coming soon.</p>
       </div>
-      <!-- Copy and paste more .project blocks for each project -->
+  <!-- Duplicate .project blocks for additional projects -->
     </div>
   </section>
 
+  <!-- Contact section -->
   <section id="contact">
     <h2>Contact</h2>
+  <!-- Email address. Add more contact info if needed -->
     <p>Email: <a href="mailto:cohunti@okstate.edu">cohunti@okstate.edu</a></p>
   </section>
 
+  <!-- Navigation bar: section links -->
   <nav>
     <ul>
       <li><a href="#home" onclick="showSection('home'); return false;">Home</a></li>
@@ -61,10 +70,11 @@
     </ul>
   </nav>
 
+  <!-- Script to show/hide sections when navigation links are clicked -->
   <script>
     function showSection(id) {
-      // Hide all sections and header
-      document.querySelectorAll('header, section').forEach(function(el) {
+      // Hide all sections
+      document.querySelectorAll('section').forEach(function(el) {
         el.classList.remove('active-section');
       });
       // Show the selected section
